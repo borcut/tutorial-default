@@ -1,13 +1,165 @@
 {
-    "atomType": "Molecule",
-    "x": 0,
-    "y": 0,
-    "uniqueID": "id-1",
-    "name": "tutorial-default",
-    "topLevel": true,
-    "allAtoms": [],
-    "allConnectors": [],
-    "unitsKey": "MM",
-    "fileTypeVersion": 1,
-    "filetypeVersion": 1
+  "atomType": "Molecule",
+  "x": 0,
+  "y": 0,
+  "uniqueID": "id-1",
+  "name": "tutorial-default",
+  "ioValues": [
+    {
+      "name": "Diameter",
+      "ioValue": 8
+    }
+  ],
+  "topLevel": true,
+  "allAtoms": [
+    {
+      "atomType": "Output",
+      "x": 0.98,
+      "y": 0.5,
+      "uniqueID": "id-2",
+      "ioValues": [
+        {
+          "name": "number or geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ]
+    },
+    {
+      "atomType": "Circle",
+      "x": 0.1844888366627497,
+      "y": 0.19540229885057472,
+      "uniqueID": "id-4",
+      "ioValues": [
+        {
+          "name": "diameter",
+          "ioValue": 8,
+          "currentEquation": "10"
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3501762632197415,
+      "y": 0.21839080459770116,
+      "uniqueID": "id-7",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Input",
+      "x": 0.025384615384615384,
+      "y": 0.3275862068965517,
+      "uniqueID": "id-11",
+      "name": "Diameter"
+    },
+    {
+      "atomType": "Rectangle",
+      "x": 0.19036427732079908,
+      "y": 0.6800766283524904,
+      "uniqueID": "id-18",
+      "ioValues": [
+        {
+          "name": "x length",
+          "ioValue": 10
+        },
+        {
+          "name": "y length",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Extrude",
+      "x": 0.3084606345475911,
+      "y": 0.6915708812260537,
+      "uniqueID": "id-22",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        },
+        {
+          "name": "height",
+          "ioValue": 10
+        }
+      ]
+    },
+    {
+      "atomType": "Assembly",
+      "x": 0.4806110458284371,
+      "y": 0.48659003831417624,
+      "uniqueID": "id-26",
+      "ioValues": [
+        {
+          "name": "Shape 1",
+          "ioValue": null
+        },
+        {
+          "name": "Shape 2",
+          "ioValue": null
+        }
+      ]
+    },
+    {
+      "atomType": "Color",
+      "x": 0.2784958871915394,
+      "y": 0.19157088122605365,
+      "uniqueID": "id-31",
+      "ioValues": [
+        {
+          "name": "geometry",
+          "ioValue": "__GEOMETRY_INPUT__"
+        }
+      ],
+      "selectedColor": "Keep Out"
+    }
+  ],
+  "allConnectors": [
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-4",
+      "ap2ID": "id-31"
+    },
+    {
+      "ap2Name": "Shape 2",
+      "ap1ID": "id-7",
+      "ap2ID": "id-26"
+    },
+    {
+      "ap2Name": "diameter",
+      "ap1ID": "id-11",
+      "ap2ID": "id-4"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-18",
+      "ap2ID": "id-22"
+    },
+    {
+      "ap2Name": "Shape 1",
+      "ap1ID": "id-22",
+      "ap2ID": "id-26"
+    },
+    {
+      "ap2Name": "number or geometry",
+      "ap1ID": "id-26",
+      "ap2ID": "id-2"
+    },
+    {
+      "ap2Name": "geometry",
+      "ap1ID": "id-31",
+      "ap2ID": "id-7"
+    }
+  ],
+  "unitsKey": "MM",
+  "fileTypeVersion": 1,
+  "filetypeVersion": 1
 }
